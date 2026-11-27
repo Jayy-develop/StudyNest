@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Enums\UserRole;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -23,6 +24,7 @@ class AuthController extends Controller
         $user = User::create([
             'name' => $validated['name'],
             'email' => $validated['email'],
+            'role' => UserRole::Student,
             'password' => $validated['password'],
             'timezone' => $validated['timezone'] ?? 'Asia/Jakarta',
             'daily_study_minutes' => 120,

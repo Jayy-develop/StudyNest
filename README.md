@@ -96,6 +96,12 @@ Opsional — isi sample data development (`mahasiswa@studynest.dev` / `StudyNest
 php artisan db:seed --class=DemoAcademicSeeder
 ```
 
+Buat akun administrator (`admin@studynest.dev` / `StudyNestAdmin123!`):
+
+```bash
+php artisan db:seed --class=AdminSeeder
+```
+
 Jalankan API server dan Queue Worker (untuk pemrosesan ekstraksi materi secara asinkron):
 
 ```bash

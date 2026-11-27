@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AiAssistantController;
+use App\Http\Controllers\Api\AdminController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CourseController;
 use App\Http\Controllers\Api\DashboardController;
@@ -47,6 +48,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/conversations', [AiAssistantController::class, 'createConversation']);
     Route::get('/conversations/{conversation}', [AiAssistantController::class, 'showConversation']);
     Route::post('/conversations/{conversation}/messages', [AiAssistantController::class, 'sendMessage'])->middleware('throttle:30,1');
+    Route::post('/conversations/{conversation}/generate-pdf', [AiAssistantController::class, 'generatePdf'])->middleware('throttle:20,1');
     Route::delete('/conversations/{conversation}', [AiAssistantController::class, 'deleteConversation']);
 
     Route::get('/quizzes', [QuizController::class, 'index']);
@@ -76,4 +78,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::patch('/study-sessions/{studySession}', [StudyPlannerController::class, 'updateSession']);
     Route::post('/study-sessions/{studySession}/reschedule', [StudyPlannerController::class, 'rescheduleSession']);
     Route::delete('/study-plans/{studyPlan}', [StudyPlannerController::class, 'destroy']);
+});
+
+Route::middleware(['auth:sanctum', 'admin'])->prefix('admin')->group(function () {
+    Route::get('/stats', [AdminController::class, 'stats']);
 });
