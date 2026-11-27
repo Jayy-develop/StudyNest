@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --bg-base: #0b0c12;
+  --bg-surface: #13141f;
+  --bg-elevated: #1a1c2b;
+  --border-subtle: #25273b;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-violet: #9b7bf7;
+  --accent-blue: #60a5fa;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Signature diagonal hatched pattern matching the Sapphire Bento aesthetic */
+.bg-hatched {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(148, 163, 184, 0.14),
+    rgba(148, 163, 184, 0.14) 2px,
+    rgba(24, 25, 38, 0.65) 2px,
+    rgba(24, 25, 38, 0.65) 6px
+  );
+}
+
+.bg-hatched-violet {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(167, 139, 250, 0.35),
+    rgba(167, 139, 250, 0.35) 2px,
+    rgba(91, 66, 173, 0.25) 2px,
+    rgba(91, 66, 173, 0.25) 6px
+  );
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0c12;
+}
+::-webkit-scrollbar-thumb {
+  background: #27293d;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3e5c;
+}
