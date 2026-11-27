@@ -136,7 +136,7 @@ class AiAssistantController extends Controller
         };
 
         $systemPrompt = implode("\n", [
-            'Kamu adalah Hayabusa AI Academic Assistant untuk mahasiswa.',
+            'Kamu adalah StudyNest Academic Assistant untuk mahasiswa.',
             "Gaya penjelasan: {$modeGuide}",
             'Aturan ketat sumber dan kejujuran:',
             '1. Prioritaskan informasi dari potongan dokumen pengguna yang tersedia di bawah.',

@@ -18,10 +18,10 @@ class DemoAcademicSeeder extends Seeder
     public function run(): void
     {
         $user = User::firstOrCreate(
-            ['email' => 'mahasiswa@hayabusa.dev'],
+            ['email' => 'mahasiswa@studynest.dev'],
             [
                 'name' => 'Raka Pratama',
-                'password' => 'HayabusaDemo123!',
+                'password' => 'StudyNestDemo123!',
                 'timezone' => 'Asia/Jakarta',
                 'daily_study_minutes' => 120,
                 'preferred_study_time' => 'evening',

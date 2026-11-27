@@ -54,7 +54,7 @@ export default function RegisterPage() {
             <GraduationCap className="h-5 w-5" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-white">Daftar Akun Hayabusa AI</h1>
+            <h1 className="text-xl font-bold text-white">Daftar Akun StudyNest</h1>
             <p className="text-xs text-slate-400">Buat ruang kerja akademik pribadi Anda.</p>
           </div>
         </div>

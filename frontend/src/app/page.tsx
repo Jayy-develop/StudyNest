@@ -28,7 +28,7 @@ export default function HomePage() {
               <GraduationCap className="h-5 w-5" />
             </div>
             <div>
-              <span className="block text-base font-bold tracking-tight text-white">Hayabusa AI</span>
+              <span className="block text-base font-bold tracking-tight text-white">StudyNest</span>
               <span className="block text-[11px] text-slate-400">Academic Intelligence</span>
             </div>
           </div>

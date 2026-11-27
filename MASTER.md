@@ -1,6 +1,6 @@
-# HAYABUSA AI --- MASTER PROJECT DOCUMENT
+# STUDYNEST --- MASTER PROJECT DOCUMENT
 
-> **Product:** Hayabusa AI\
+> **Product:** StudyNest\
 > **Category:** All-in-One Student Assistant\
 > **Tagline:** Your Academic Life, Smarter with AI.\
 > **Document purpose:** Dokumen acuan utama produk, fitur, UX,
@@ -10,11 +10,11 @@
 
 ## 1. Product Overview
 
-Hayabusa AI adalah platform pendamping akademik mahasiswa yang
+StudyNest adalah platform pendamping akademik mahasiswa yang
 menggabungkan AI Academic Assistant dan Smart Student Planner dalam satu
 ekosistem.
 
-Hayabusa membantu mahasiswa mengelola mata kuliah, memahami materi,
+StudyNest membantu mahasiswa mengelola mata kuliah, memahami materi,
 membuat latihan soal, mengatur jadwal, memantau deadline, dan
 merencanakan kegiatan belajar.
 

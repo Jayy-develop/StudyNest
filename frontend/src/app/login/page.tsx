@@ -45,7 +45,7 @@ export default function LoginPage() {
             <GraduationCap className="h-5 w-5" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-white">Masuk ke Hayabusa AI</h1>
+            <h1 className="text-xl font-bold text-white">Masuk ke StudyNest</h1>
             <p className="text-xs text-slate-400">Your Academic Life, Smarter with AI.</p>
           </div>
         </div>

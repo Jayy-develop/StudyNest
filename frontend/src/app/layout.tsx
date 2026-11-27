@@ -3,7 +3,7 @@ import "./globals.css";
 import { AuthProvider } from "@/components/AuthProvider";
 
 export const metadata: Metadata = {
-  title: "Hayabusa AI — Your Academic Life, Smarter with AI",
+  title: "StudyNest — Your Academic Life, Smarter with AI",
   description:
     "Platform pendamping akademik mahasiswa all-in-one: materi kuliah, RAG AI assistant, kuis, jadwal, tugas, dan study planner.",
 };

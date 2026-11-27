@@ -242,7 +242,7 @@ export default function PlannerPage() {
         <EmptyState
           icon={<Sparkles className="h-6 w-6" />}
           title="Belum ada rencana belajar"
-          description="Buat rencana belajar agar Hayabusa AI memetakan sesi belajar di jam kosong Anda."
+          description="Buat rencana belajar agar StudyNest memetakan sesi belajar di jam kosong Anda."
         />
       ) : (
         <div className="space-y-6">

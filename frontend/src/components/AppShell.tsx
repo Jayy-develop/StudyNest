@@ -117,7 +117,7 @@ export function AppShell({
           <span className="rounded-full bg-[#c4b5fd]" />
         </div>
         <div>
-          <p className="text-sm font-bold tracking-tight text-white">Hayabusa AI</p>
+          <p className="text-sm font-bold tracking-tight text-white">StudyNest</p>
           <p className="text-[11px] text-slate-400">LMS & Student AI</p>
         </div>
       </div>

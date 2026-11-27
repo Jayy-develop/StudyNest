@@ -124,7 +124,7 @@ export default function DashboardPage() {
             </h1>
           </div>
 
-          {/* BENTO ROW 1: Readiness Card | Hayabusa Intelligence Hero | Mini Calendar & Agenda */}
+          {/* BENTO ROW 1: Readiness Card | StudyNest Intelligence Hero | Mini Calendar & Agenda */}
           <div className="grid gap-4 xl:grid-cols-12">
             {/* Left Card: Academic Materials & Tasks Readiness */}
             <div className="flex flex-col justify-between rounded-2xl border border-[#25273b] bg-[#141521] p-5 xl:col-span-4">
@@ -164,54 +164,57 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              {/* Segmented Hatched + Glowing Lavender Bar */}
-              <div className="mt-6">
-                <div className="relative mb-2 flex items-center justify-between text-[11px] text-slate-400">
-                  <span>Kesiapan Materi</span>
-                  <span className="rounded-lg border border-violet-400/30 bg-[#1e1b38] px-2 py-0.5 font-semibold text-violet-200">
-                    {materialRatio}% siap
-                  </span>
+              {/* Segmented Hatched + Glowing Lavender Bar with Floating Tooltip */}
+              <div className="relative mt-6 pt-6">
+                <div className="pointer-events-none absolute left-1/2 top-0 z-10 -translate-x-1/2 rounded-xl border border-white/15 bg-[#1d1e30]/90 px-3.5 py-2 text-center shadow-[0_10px_25px_rgba(0,0,0,0.45)] backdrop-blur-md">
+                  <div className="flex items-center justify-center gap-1.5 text-[10px] text-slate-300">
+                    <span className="h-1.5 w-1.5 rounded-full bg-[#a78bfa]" />
+                    <span>Siap AI</span>
+                  </div>
+                  <p className="mt-0.5 text-sm font-bold text-white">{completedMaterials} / {totalMaterials}</p>
                 </div>
-                <div className="flex h-12 items-end gap-2">
+
+                <div className="flex h-14 items-end gap-2">
                   <div
                     className="bg-hatched h-full flex-1 rounded-xl border border-[#2a2d44]"
                     title={`Total Materi: ${totalMaterials}`}
                   />
                   <div
-                    className="h-full w-16 rounded-xl bg-gradient-to-b from-[#c4b5fd] to-[#8b5cf6] shadow-[0_0_20px_rgba(139,92,246,0.35)] transition-all"
-                    style={{ height: `${Math.max(28, materialRatio)}%` }}
+                    className="w-16 rounded-xl bg-gradient-to-b from-[#d8b4fe] via-[#a78bfa] to-[#7c3aed] shadow-[0_0_24px_rgba(139,92,246,0.45)] transition-all"
+                    style={{ height: `${Math.max(42, materialRatio)}%` }}
                     title={`Materi Selesai Diproses: ${completedMaterials}`}
                   />
                   <div
-                    className="bg-hatched-violet h-full w-10 rounded-xl border border-violet-500/30"
-                    style={{ height: `${Math.max(25, taskRatio)}%` }}
+                    className="bg-hatched-violet w-10 rounded-xl border border-violet-500/35"
+                    style={{ height: `${Math.max(36, taskRatio)}%` }}
                     title={`Tugas Selesai: ${completedTasks}/${totalTasks}`}
                   />
                 </div>
-                <div className="mt-2 flex items-center justify-between text-[11px] text-slate-400">
+                <div className="mt-2.5 flex items-center justify-between text-[11px] font-medium text-slate-400">
                   <span>{totalMaterials} Dokumen</span>
-                  <span>{materialRatio}% AI Ready</span>
+                  <span className="text-violet-300">{materialRatio}% AI</span>
                   <span>{taskRatio}% Tugas</span>
                 </div>
               </div>
             </div>
 
-            {/* Center Spotlight Card: Hayabusa Intelligence */}
-            <div className="relative flex min-h-[250px] flex-col justify-between overflow-hidden rounded-2xl border border-violet-500/50 bg-[#12121e] p-6 text-center shadow-[0_0_35px_rgba(139,92,246,0.2)] xl:col-span-5">
-              {/* Subtle ambient dot grid */}
+            {/* Center Spotlight Card: StudyNest Intelligence */}
+            <div className="relative flex min-h-[270px] flex-col justify-between overflow-hidden rounded-2xl border border-violet-400/60 bg-[#11111d] p-6 text-center shadow-[0_0_40px_rgba(139,92,246,0.28),inset_0_0_24px_rgba(139,92,246,0.12)] xl:col-span-5">
+              {/* Subtle ambient dot/square grid */}
               <div
-                className="pointer-events-none absolute inset-0 opacity-25"
+                className="pointer-events-none absolute inset-0 opacity-20"
                 style={{
-                  backgroundImage: "radial-gradient(#475569 1px, transparent 1px)",
-                  backgroundSize: "18px 18px",
+                  backgroundImage:
+                    "linear-gradient(to right, rgba(148,163,184,0.16) 1px, transparent 1px), linear-gradient(to bottom, rgba(148,163,184,0.16) 1px, transparent 1px)",
+                  backgroundSize: "24px 24px",
                 }}
               />
 
               <div className="relative z-10">
                 <h2 className="bg-gradient-to-r from-[#60a5fa] via-[#c084fc] to-[#fb923c] bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl">
-                  Hayabusa Intelligence
+                  StudyNest Intelligence
                 </h2>
-                <p className="mt-1.5 text-xs text-slate-300 sm:text-sm">
+                <p className="mx-auto mt-1.5 max-w-md text-xs text-slate-300 sm:text-sm">
                   Belajar dari materi kuliah, rangkum dokumen, dan uji pemahaman secara terarah
                 </p>
 
@@ -230,39 +233,42 @@ export default function DashboardPage() {
                 </div>
               </div>
 
-              {/* Layered organic wave graphic */}
+              {/* 3D Sculptural Layered Wave Graphic */}
               <svg
-                viewBox="0 0 500 130"
-                className="pointer-events-none relative z-0 -mx-6 -mb-6 mt-3 h-28 w-[calc(100%+3rem)]"
+                viewBox="0 0 500 150"
+                className="pointer-events-none relative z-0 -mx-6 -mb-6 mt-2 h-32 w-[calc(100%+3rem)]"
                 preserveAspectRatio="none"
                 aria-hidden="true"
               >
                 <defs>
-                  <linearGradient id="waveGlowA" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stopColor="#fbbf24" />
-                    <stop offset="50%" stopColor="#fb7185" />
+                  <linearGradient id="waveGlowA" x1="0%" y1="0%" x2="100%" y2="20%">
+                    <stop offset="0%" stopColor="#fde047" />
+                    <stop offset="42%" stopColor="#fb923c" />
+                    <stop offset="75%" stopColor="#f43f5e" />
                     <stop offset="100%" stopColor="#8b5cf6" />
                   </linearGradient>
-                  <linearGradient id="waveGlowB" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#fde047" stopOpacity="0.9" />
-                    <stop offset="55%" stopColor="#f43f5e" stopOpacity="0.85" />
-                    <stop offset="100%" stopColor="#6366f1" stopOpacity="0.9" />
+                  <linearGradient id="waveGlowB" x1="10%" y1="0%" x2="90%" y2="100%">
+                    <stop offset="0%" stopColor="#fef08a" stopOpacity="0.95" />
+                    <stop offset="48%" stopColor="#fb7185" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.95" />
+                  </linearGradient>
+                  <linearGradient id="waveGlowC" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#f97316" stopOpacity="0.7" />
+                    <stop offset="50%" stopColor="#ec4899" stopOpacity="0.75" />
+                    <stop offset="100%" stopColor="#6366f1" stopOpacity="0.8" />
                   </linearGradient>
                 </defs>
                 <path
-                  d="M0,95 C90,30 160,115 260,55 C350,0 420,90 500,45 L500,130 L0,130 Z"
+                  d="M65,150 C115,60 190,15 265,42 C340,70 400,115 445,150 Z"
                   fill="url(#waveGlowA)"
-                  opacity="0.7"
                 />
                 <path
-                  d="M0,110 C110,55 180,20 280,75 C360,118 430,45 500,80 L500,130 L0,130 Z"
+                  d="M95,150 C150,78 215,38 285,68 C350,95 395,125 430,150 Z"
                   fill="url(#waveGlowB)"
-                  opacity="0.88"
                 />
                 <path
-                  d="M40,130 C130,75 220,70 320,100 C400,122 455,88 500,105 L500,130 Z"
-                  fill="#c084fc"
-                  opacity="0.45"
+                  d="M125,150 C180,98 238,68 302,94 C355,115 390,135 415,150 Z"
+                  fill="url(#waveGlowC)"
                 />
               </svg>
             </div>

@@ -36,7 +36,7 @@ class AuthController extends Controller
             ],
         ]);
 
-        $token = $user->createToken('hayabusa-web')->plainTextToken;
+        $token = $user->createToken('studynest-web')->plainTextToken;
 
         return response()->json([
             'user' => $user,
@@ -59,7 +59,7 @@ class AuthController extends Controller
             ], 401);
         }
 
-        $token = $user->createToken('hayabusa-web')->plainTextToken;
+        $token = $user->createToken('studynest-web')->plainTextToken;
 
         return response()->json([
             'user' => $user,

@@ -1,15 +1,15 @@
 services:
   postgres:
     image: pgvector/pgvector:pg17
-    container_name: hayabusa-postgres
+    container_name: studynest-postgres
     environment:
-      POSTGRES_DB: hayabusa_ai
+      POSTGRES_DB: studynest_ai
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres_dev_password
     ports:
       - "5432:5432"
     volumes:
-      - hayabusa_pgdata:/var/lib/postgresql/data
+      - studynest_pgdata:/var/lib/postgresql/data
 
 volumes:
-  hayabusa_pgdata:
+  studynest_pgdata:

@@ -332,7 +332,7 @@ export default function AssistantPage() {
                   >
                     <div className="mb-1 flex items-center justify-between text-xs text-slate-400">
                       <span className="font-semibold text-slate-300">
-                        {msg.role === "user" ? "Anda" : "Hayabusa AI"}
+                        {msg.role === "user" ? "Anda" : "StudyNest"}
                       </span>
                       {msg.metadata?.used_documents && (
                         <Badge tone="emerald">Berbasis Dokumen</Badge>
